@@ -1,3 +1,29 @@
 
+<div style="text-align:left;width:500px;">
+  <h1>
+      {{ title }}!
+  </h1>
 
+  <table *ngIf="arrData">
+      <!-- ADD HEADERS -->
+      <tr>
+        <th>City</th>
+        <th>start date</th>
+        <th>end date</th>
+        <th>price</th>
+        <th>status</th>
+        <th>color</th>
+      </tr>
+
+      <!-- BIND ARRAY TO TABLE -->
+      <tr *ngFor="let data of arrData">
+          <td>{{data.city}}</td>
+          <td>{{data.start_date}}</td>
+          <td>{{data.end_date}}</td>
+          <td>{{data.price}}</td>
+          <td>{{data.status}}</td>
+          <td>{{data.color}}</td>
+      </tr>
+  </table>
+</div>
 <router-outlet></router-outlet>
