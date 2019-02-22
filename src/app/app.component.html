@@ -1,29 +1,34 @@
 
-<div style="text-align:left;width:500px;">
-  <h1>
-      {{ title }}!
-  </h1>
 
-  <table *ngIf="arrData">
-      <!-- ADD HEADERS -->
-      <tr>
-        <th>City</th>
-        <th>start date</th>
-        <th>end date</th>
-        <th>price</th>
-        <th>status</th>
-        <th>color</th>
-      </tr>
+<div class="container align-center">
+    <div class="title">
+      <h1>
+          {{ title }}
+      </h1>
+    </div>
+    <table class="table table-striped" *ngIf="arrData">
+        <thead class="thead-dark">
+          <th>City</th>
+          <th>Start Date</th>
+          <th>End date</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Color</th>
+        </thead>
 
-      <!-- BIND ARRAY TO TABLE -->
-      <tr *ngFor="let data of arrData">
-          <td>{{data.city}}</td>
-          <td>{{data.start_date}}</td>
-          <td>{{data.end_date}}</td>
-          <td>{{data.price}}</td>
-          <td>{{data.status}}</td>
-          <td>{{data.color}}</td>
-      </tr>
-  </table>
+        <tbody>
+          <tr *ngFor="let data of arrData">
+            <td>{{data.city}}</td>
+            <td>{{data.start_date}}</td>
+            <td>{{data.end_date}}</td>
+            <td>{{data.price}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.color}}</td>
+          </tr>
+        </tbody>
+
+    </table>
+
 </div>
+
 <router-outlet></router-outlet>
