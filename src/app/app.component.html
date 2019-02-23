@@ -6,6 +6,20 @@
           {{ title }}
       </h1>
     </div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(value)]="startDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker ></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker1" placeholder="Choose a date" [(ngModel)]="endDate">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 ></mat-datepicker>
+    </mat-form-field>
+
+    <button type="submit" class="btn btn-primary" (click)="changeName()">Submit</button>
+
     <table class="table table-striped" *ngIf="arrData">
         <thead class="thead-dark">
           <th>City</th>
