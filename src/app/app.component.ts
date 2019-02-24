@@ -17,28 +17,29 @@ export class AppComponent {
       this.httpService.get('./assets/data.json').subscribe(
         data => {
           this.arrData = data as string [];	 // FILL THE ARRAY WITH DATA.
-          //  console.log(this.arrBirds[1]);
+          //  console.log(this.arrData[1]);
         },
         (err: HttpErrorResponse) => {
           console.log (err.message);
         }
       );
       console.log(this.arrData)
-
      }
-     changeName() {
-       console.log(this.arrData);
-       console.log(this.endDate)
+     FilterData() {
+      let FilteredData = []
+      FilteredData = this.arrData.filter(
+        m => new Date(m.start_date) >= new Date(this.startDate) &&
+        new Date(m.start_date) <= new Date(this.endDate) &&
+        new Date(m.end_date) <= new Date(this.endDate)
+        && new Date(m.end_date) >= new Date(this.startDate)
+      );
+      if (FilteredData.length >= 0) {
+        this.arrData = FilteredData as string []
+      }
      }
 
   }
 
-// let start = "01-02-2017;
-// let end = "06-07-2017";
-
-// let selectedMembers = this.arrData.filter(
-//   m => new Date(m.dat
-// );
 
 
 
