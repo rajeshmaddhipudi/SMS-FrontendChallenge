@@ -6,17 +6,19 @@ Step 1: npm install -g @angular/cli
 
 Step 2: Download or clone project from https://github.com/rajeshmaddhipudi/SMS-FrontendChallenge
 
-step 3: cd SMS-FrontendChallenge
+step 3: cd SMS-FrontendChallenge-master/SMS-FrontendChallenge-master
 
 step 4: npm install
 
-step 5: ng serve
+step 5: ng serve 
 
-step 6: regester email and password
+step 6: go to web browser and type  http://localhost:4200/
 
-step 7 : login with regestered email and password
+step 7: regester email and password
 
-step 8 : home page which shows table of data
+step 8 : login with regestered email and password
+
+step 9 : home page which shows table of data
 
 
 
